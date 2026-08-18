@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 320px;
+}
+
+.display {
+    background: #2d3436;
+    color: #00ff00;
+    font-size: 2.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-weight: bold;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-operator {
+    background: #667eea;
+    color: white;
+}
+
+.btn-operator:hover {
+    background: #5568d3;
+}
+
+.btn-equals {
+    background: #00d84b;
+    color: white;
+    grid-column: span 1;
+}
+
+.btn-equals:hover {
+    background: #00c442;
+}
+
+.btn-clear {
+    background: #ff6b6b;
+    color: white;
+    grid-column: span 1;
+}
+
+.btn-clear:hover {
+    background: #ff5252;
+}
+
+.btn-decimal {
+    background: #f0f0f0;
+}
+
+.btn-backspace {
+    background: #ffa500;
+    color: white;
+}
+
+.btn-backspace:hover {
+    background: #ff9500;
+}
+
+.btn-zero {
+    grid-column: span 1;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .display {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.25rem;
+    }
+}
